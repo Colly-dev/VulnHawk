@@ -1,3 +1,22 @@
+```text
+██╗   ██╗██╗   ██╗██╗     ███╗   ██╗██╗  ██╗ █████╗ ██╗    ██╗██╗  ██╗
+██║   ██║██║   ██║██║     ████╗  ██║██║  ██║██╔══██╗██║    ██║██║ ██╔╝
+██║   ██║██║   ██║██║     ██╔██╗ ██║███████║███████║██║ █╗ ██║█████╔╝ 
+╚██╗ ██╔╝██║   ██║██║     ██║╚██╗██║██╔══██║██╔══██║██║███╗██║██╔═██╗ 
+ ╚████╔╝ ╚██████╔╝███████╗██║ ╚████║██║  ██║██║  ██║╚███╔███╔╝██║  ██╗
+  ╚═══╝   ╚═════╝ ╚══════╝╚═╝  ╚═══╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚══╝╚══╝ ╚═╝  ╚═╝
+```
+
+# VulnHawk 🦅
+
+**VulnHawk** is a production-grade, Python-powered web application vulnerability scanner demonstrating offensive security, AppSec, and automated vulnerability assessment capabilities. It is suitable for a cybersecurity portfolio, GitHub showcase, and AppSec / penetration tester job applications.
+
+<p align="center">
+  [![VulnHawk CI](https://github.com/Colly-dev/VulnHawk/actions/workflows/ci.yml/badge.svg)](https://github.com/Colly-dev/VulnHawk/actions/workflows/ci.yml)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  [![Python Version](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/release/python-3100/)
+</p>
+
 ⚠️ LEGAL DISCLAIMER ⚠️
 ================================================================================
 VulnHawk is a security testing tool designed for EDUCATIONAL PURPOSES and
@@ -14,14 +33,6 @@ resulting from the use of this software.
 
 USE RESPONSIBLY. STAY LEGAL. BE ETHICAL.
 ================================================================================
-
-# VulnHawk 🦅
-
-[![VulnHawk CI](https://github.com/Colly-dev/VulnHawk/actions/workflows/ci.yml/badge.svg)](https://github.com/Colly-dev/VulnHawk/actions/workflows/ci.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python Version](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/release/python-3100/)
-
-**VulnHawk** is a production-grade, Python-powered web application vulnerability scanner demonstrating offensive security, AppSec, and automated vulnerability assessment capabilities. It is suitable for a cybersecurity portfolio, GitHub showcase, and AppSec / penetration tester job applications.
 
 ## 📸 Screenshots
 
