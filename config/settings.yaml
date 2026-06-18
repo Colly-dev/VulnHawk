@@ -1,0 +1,35 @@
+# ⚠️ LEGAL DISCLAIMER ⚠️
+# This configuration file is part of VulnHawk, a security testing tool designed for
+# EDUCATIONAL PURPOSES and AUTHORIZED SECURITY TESTING ONLY.
+# ONLY use this software to scan systems you own or have explicit written permission to test.
+# The authors assume NO LIABILITY for misuse, damage, or legal consequences.
+# USE RESPONSIBLY. STAY LEGAL. BE ETHICAL.
+
+scan:
+  timeout: 15
+  concurrency: 10
+  rate_limit: 0.1 # seconds between requests
+  enabled_scanners:
+    - xss
+    - sqli
+    - ssrf
+    - lfi
+    - xxe
+    - ssti
+    - redirect
+    - exposure
+    - headers
+  report_formats:
+    - html
+    - json
+  crawl_depth: 2
+  crawl_pages: 50
+
+http:
+  user_agent: "VulnHawk/1.0 (Web Vulnerability Scanner; +https://github.com/Colly-Dev/VulnHawk)"
+  proxy: null
+  verify_ssl: true
+
+logging:
+  level: INFO
+  file: vulnhawk.log

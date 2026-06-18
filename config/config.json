@@ -1,0 +1,10 @@
+{
+  "scanner_settings": {
+    "default_concurrency": 5,
+    "enable_passive_scans": true
+  },
+  "report_settings": {
+    "json_indent": 2,
+    "include_raw_response": false
+  }
+}
