@@ -26,16 +26,16 @@ LEGAL_DISCLAIMER = """
 ╚═══════════════════════════════════════════════════════════════╝
 """
 
-ASCII_BANNER = """
+from rich.panel import Panel
+from rich.console import Console
 
-██╗   ██╗██╗   ██╗██╗     ██╗  ██╗███╗   ██╗ ██████╗ ██╗    ██╗
-██║   ██║██║   ██║██║     ██║  ██║████╗  ██║██╔═══██╗██║    ██║
-██║   ██║██║   ██║██║     ███████║██╔██╗ ██║██║   ██║██║ █╗ ██║
-██║   ██║██║   ██║██║     ██╔══██║██║╚██╗██║██║   ██║██║███╗██║
-╚██████╔╝╚██████╔╝███████╗██║  ██║██║ ╚████║╚██████╔╝╚███╔███╔╝
- ╚═════╝  ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝  ╚══╝╚══╝ 
-                                                               
-           Elite Web Vulnerability Scanner v1.0.0
+ASCII_BANNER = """
+██╗   ██╗██╗   ██╗██╗     ███╗   ██╗██╗  ██╗ █████╗ ██╗    ██╗██╗  ██╗
+██║   ██║██║   ██║██║     ████╗  ██║██║  ██║██╔══██╗██║    ██║██║ ██╔╝
+██║   ██║██║   ██║██║     ██╔██╗ ██║███████║███████║██║ █╗ ██║█████╔╝ 
+╚██╗ ██╔╝██║   ██║██║     ██║╚██╗██║██╔══██║██╔══██║██║███╗██║██╔═██╗ 
+ ╚████╔╝ ╚██████╔╝███████╗██║ ╚████║██║  ██║██║  ██║╚███╔███╔╝██║  ██╗
+  ╚═══╝   ╚═════╝ ╚══════╝╚═╝  ╚═══╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚══╝╚══╝ ╚═╝  ╚═╝
 """
 
 @click.command()
@@ -50,7 +50,15 @@ def main(url, scan, report, verbose):
     This tool is for EDUCATIONAL and AUTHORIZED testing only.
     Please ensure you have explicit permission before scanning any target.
     """
-    click.echo(ASCII_BANNER)
+    console = Console()
+    banner_panel = Panel(
+        f"[bold red]{ASCII_BANNER}[/bold red]\n"
+        "[dim white]Elite Web Vulnerability Scanner v1.0.0 | by collykip[/dim white]\n"
+        "[bold red]For authorized testing only[/bold red]",
+        border_style="red",
+        padding=(0, 1)
+    )
+    console.print(banner_panel)
     click.echo(LEGAL_DISCLAIMER)
 
     if not click.confirm("Do you agree to these terms? (yes/no):"): 

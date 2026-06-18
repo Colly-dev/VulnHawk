@@ -120,6 +120,33 @@ VulnHawk provides a comprehensive CLI:
   python vulnhawk.py -u https://example.com -v
   ```
 
+## 🧪 Testing and Demonstration
+
+If you do not have a live target to scan, you can use these commands to test the tool's interface, progress bars, and report generation capabilities.
+
+### 1. Test the Startup Banner and Legal Disclaimer
+Simply run the tool without a target to see the professional red banner and interactive legal notice:
+```bash
+python vulnhawk.py -u http://localhost:8000
+```
+
+### 2. Simulate a Full Scan
+Run a full scan against a local or mock address to observe the `rich`-powered progress bars and terminal output:
+```bash
+python vulnhawk.py -u http://example.com --scan all --report all -v
+```
+
+### 3. Generate Sample Reports
+After running a scan (even against a mock target), check the `reports/` directory to see the generated professional HTML and JSON reports:
+- **HTML Report**: `reports/html/example_com_report.html`
+- **JSON Report**: `reports/json/example_com_report.json`
+
+### 4. Verify Payload Loading
+You can verify that the scanner correctly loads payloads from the `payloads/` directory by checking the logs:
+```bash
+tail -f logs/vulnhawk.log
+```
+
 ## 📄 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
