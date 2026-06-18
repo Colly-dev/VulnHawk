@@ -69,6 +69,14 @@ VulnHawk orchestrates a complete **9-step Vulnerability Scanning Workflow**:
 ### Architecture Diagram
 ![Architecture Diagram](docs/diagrams/architecture.png)
 
+Full architecture documentation:
+[docs/architecture/architecture.md](docs/architecture/architecture.md)
+
+---
+
+## 🎥 Demo Video
+[![VulnHawk Demo](https://img.shields.io/badge/YouTube-Demo-red?style=for-the-badge&logo=youtube)](demo/demo_video_link.txt)
+
 ## 🛠️ Installation
 
 ### Prerequisites
