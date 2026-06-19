@@ -12,8 +12,12 @@
 **VulnHawk** is a production-grade, Python-powered web application vulnerability scanner demonstrating offensive security, AppSec, and automated vulnerability assessment capabilities. It is suitable for a cybersecurity portfolio, GitHub showcase, and AppSec / penetration tester job applications.
 
 <p align="center">
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-  [![Python Version](https://img.com/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/release/python-3100/)
+  <a href="https://opensource.org/licenses/MIT">
+    <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT">
+  </a>
+  <a href="https://www.python.org/downloads/release/python-3100/">
+    <img src="https://img.shields.io/badge/Python-3.10%2B-blue.svg" alt="Python Version">
+  </a>
 </p>
 
 ⚠️ LEGAL DISCLAIMER ⚠️
