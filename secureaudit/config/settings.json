@@ -1,9 +1,0 @@
-{
-  "app_name": "SecureAudit",
-  "environment": "development",
-  "debug_mode": true,
-  "log_level": "INFO",
-  "database_url": "sqlite:///../databases/secureaudit.db",
-  "secret_key": "YOUR_SUPER_SECRET_KEY_HERE_REPLACE_ME",
-  "dashboard_port": 5000
-}
