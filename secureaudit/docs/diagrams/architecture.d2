@@ -1,0 +1,82 @@
+
+# SecureAudit Architecture Diagram
+
+# Actors
+user -> SecureAudit.CLI
+user -> SecureAudit.Dashboard
+
+# SecureAudit System
+SecureAudit: {
+  CLI: {
+    shape: cylinder
+    label: "CLI (secureaudit.py)"
+  }
+  Dashboard: {
+    shape: rectangle
+    label: "Flask Web Dashboard"
+  }
+  CoreEngine: {
+    shape: hexagon
+    label: "Core Audit Engine"
+  }
+  Modules: {
+    shape: cloud
+    label: "Audit Modules"
+    submodules: {
+      Web: {
+        label: "Headers, TLS"
+      }
+      Cloud: {
+        label: "AWS, Azure"
+      }
+      OS: {
+        label: "Linux, Windows"
+      }
+      Compliance: {
+        label: "CIS Benchmarks"
+      }
+      Network: {
+        label: "Port Scan"
+      }
+    }
+  }
+  Database: {
+    shape: cylinder
+    label: "SQLite/PostgreSQL DB"
+  }
+  Reporting: {
+    shape: rectangle
+    label: "Report Engine"
+  }
+}
+
+# External Systems
+ExternalTarget: {
+  shape: cloud
+  label: "External Target Systems"
+}
+
+# Connections
+user -> SecureAudit.CLI: "Executes commands"
+user -> SecureAudit.Dashboard: "Accesses UI"
+
+SecureAudit.CLI -> SecureAudit.CoreEngine: "Triggers Audits"
+SecureAudit.Dashboard -> SecureAudit.CoreEngine: "Triggers Audits"
+
+SecureAudit.CoreEngine -> SecureAudit.Modules.Web: "Uses Web Modules"
+SecureAudit.CoreEngine -> SecureAudit.Modules.Cloud: "Uses Cloud Modules"
+SecureAudit.CoreEngine -> SecureAudit.Modules.OS: "Uses OS Modules"
+SecureAudit.CoreEngine -> SecureAudit.Modules.Compliance: "Uses Compliance Modules"
+SecureAudit.CoreEngine -> SecureAudit.Modules.Network: "Uses Network Modules"
+
+SecureAudit.Modules.Web -> ExternalTarget: "HTTP/S Requests"
+SecureAudit.Modules.Cloud -> ExternalTarget: "Cloud APIs (Read-Only)"
+SecureAudit.Modules.OS -> ExternalTarget: "SSH/WinRM (Read-Only)"
+SecureAudit.Modules.Network -> ExternalTarget: "Network Probes"
+
+SecureAudit.CoreEngine -> SecureAudit.Database: "Stores Audit Data"
+SecureAudit.Dashboard -> SecureAudit.Database: "Retrieves Data"
+SecureAudit.Reporting -> SecureAudit.Database: "Retrieves Data"
+
+SecureAudit.CoreEngine -> SecureAudit.Reporting: "Generates Reports"
+SecureAudit.Dashboard -> SecureAudit.Reporting: "Displays Reports"

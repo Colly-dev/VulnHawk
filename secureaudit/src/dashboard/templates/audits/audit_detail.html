@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}Audit Detail - SecureAudit{% endblock %}
+
+{% block content %}
+<div class="audit-detail">
+    <h2>Audit: {{ audit.target }}</h2>
+    
+    <div class="audit-info">
+        <p><strong>Type:</strong> {{ audit.audit_type }}</p>
+        <p><strong>Status:</strong> {{ audit.status }}</p>
+        <p><strong>Score:</strong> {{ audit.score }}/100</p>
+        <p><strong>Rating:</strong> {{ audit.rating }}</p>
+        <p><strong>Total Findings:</strong> {{ audit.total_findings }}</p>
+        <p><strong>Created:</strong> {{ audit.created_at.strftime('%Y-%m-%d %H:%M:%S') }}</p>
+    </div>
+
+    <h3>Findings</h3>
+    <table class="findings-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Severity</th>
+                <th>Category</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for finding in findings %}
+            <tr class="severity-{{ finding.severity.lower() }}">
+                <td>{{ finding.finding_id }}</td>
+                <td>{{ finding.title }}</td>
+                <td><span class="severity-badge">{{ finding.severity }}</span></td>
+                <td>{{ finding.category }}</td>
+                <td>{{ finding.description }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
